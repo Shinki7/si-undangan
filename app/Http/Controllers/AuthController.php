@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     public function index(){
+        if (Auth::check()) {
+            return redirect()->route('admin.home'); // Redirect jika sudah login
+        }
         return view('dashboard.login');
     }
 
@@ -17,7 +20,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/admin/home');
+            return redirect()->route('admin.home');
         }
 
         return back()->with([

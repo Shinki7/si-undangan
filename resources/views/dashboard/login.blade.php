@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SI - STRESS</title>
+    <title>SI - UNDANGAN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
                                 <div class="alert alert-danger">Username atau Password salah!</div>
                             @endif
                             <div class="form-left h-100 py-5 px-5">
-                                <form action="{{route('admin.login')}}" method="POST" class="row g-4">
+                                <form action="{{route('login')}}" method="POST" class="row g-4">
                                     @csrf
                                         <div class="col-12">
                                             <label>Username<span class="text-danger">*</span></label>
