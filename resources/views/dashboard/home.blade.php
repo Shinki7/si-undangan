@@ -1,47 +1,60 @@
-@extends('layouts.dashboard')
+@extends('layouts.admin')
 
-@section('content')
-<div class="d-flex gap-4">
-    <div class="card w-100 text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Data User</div>
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <h1 class="p"></h1>
-            <i class="bi bi-person-circle" style="font-size: 50px"></i>
-          </div>
-        </div>
-      </div>
-      <div class="card w-100 text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Data Report</div>
-        <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
-                <h1 class="p"></h1>
-                <i class="bi bi-bar-chart-fill" style="font-size: 50px"></i>
-              </div>
-        </div>
-      </div>
-      <div class="card w-100 text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Data Penyakit</div>
-        <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
-                <h1 class="p"></h1>
-                <i class="bi bi-clipboard2-pulse-fill" style="font-size: 50px"></i>
-              </div>
-        </div>
-      </div>
-</div>
-
-<div class="row">
-  <div class="col-5">
-  </div>
-  <div class="col-7">
-  </div>
-</div>
-
-
-
+@section('title')
+    <title>Dashboard</title>
 @endsection
 
-@push('script')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
-@endpush
+<!-- TAG YANG DIAPIT OLEH SECTION('CONTENT') AKAN ME-REPLACE ('CONTENT') PADA MASTER LAYOUTS -->
+@section('content')
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Aktivitas Toko</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="callout callout-info">
+                                        <small class="text-muted">Omset Harian</small>
+                                        <br>
+                                        <strong class="h4">Rp 0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-danger">
+                                        <small class="text-muted">Pelanggan Baru (H-7)</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-primary">
+                                        <small class="text-muted">Perlu Dikirim</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-success">
+                                        <small class="text-muted">Total Produk</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@endsection
